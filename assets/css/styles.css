@@ -1,0 +1,66 @@
+/* Définition pour le style Regular */
+@font-face {
+  font-family: "TRIP-sans";
+  src: url("../fonts/trip-sans-mono-regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Définition pour le style Bold */
+@font-face {
+  font-family: "TRIP-sans";
+  src: url("../fonts/trip-sans-bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Définition pour le style Medium */
+@font-face {
+  font-family: "TRIP-sans";
+  src: url("../fonts/trip-sans-medium.otf") format("opentype");
+  font-weight: 500; /* Medium est généralement représenté par une valeur de 500 */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Définition pour le style Ultra */
+@font-face {
+  font-family: "TRIP-sans";
+  src: url("../fonts/trip-sans-ultra.otf") format("opentype");
+  font-weight: 800; /* Ultra pourrait être représenté par une valeur plus élevée comme 800 ou 900 */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Définition pour le style Variable (si nécessaire) */
+@font-face {
+  font-family: "TRIP-sans";
+  src: url("../fonts/trip-sans-variable.ttf") format("truetype");
+  font-weight: normal; /* À ajuster selon vos besoins, peut-être qu'il s'agit d'une police variable qui nécessite des paramètres additionnels */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Définition pour le style par défaut (si nécessaire) */
+@font-face {
+  font-family: "TRIP-sans";
+  src: url("../fonts/trip-sans.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 10% 0 10%;
+  font-family: "TRIP-sans", sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+}
