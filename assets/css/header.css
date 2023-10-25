@@ -2,53 +2,66 @@ header {
   width: 100%;
 }
 
+.menu-burger{
+  display: none;
+    @media screen and (max-width: 768px) {
+     display: inline;
+     margin: 5px;
+  }
+}
+
 .main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   margin-top: 20px;
+}
 
-  .logo {
-    width: 188px;
-    height: 40px;
+.main-nav .logo {
+  width: 188px;
+  height: 40px;
+}
 
-    &:hover {
-      cursor: pointer;
-    }
+.main-nav .logo:hover {
+  cursor: pointer;
+}
+
+.main-nav .button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+     @media screen and (max-width: 768px) {
+     display: none;
+     justify-content: flex-start;
   }
+}
 
-  .button-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.main-nav .btn {
+  margin-left: 20px;
+  border: none;
+  background-color: white;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 20px;
+}
 
-    .btn {
-      margin-left: 20px;
-      border: none;
-      background-color: white;
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 20px;
+.main-nav .btn:hover {
+  cursor: pointer;
+  background-color: rgb(229, 226, 226);
+}
 
-      &:hover {
-        cursor: pointer;
-        background-color: rgb(229, 226, 226);
-      }
+.main-nav .btn .icon {
+  margin-right: 5px;
+}
 
-      .icon {
-        margin-right: 5px;
-      }
-    }
+.main-nav .btn:last-child {
+  color: white;
+  background-color: black;
+}
 
-    .btn:last-child {
-      color: white;
-      background-color: black;
-
-      &:hover {
-        cursor: pointer;
-        background-color: rgb(40, 40, 40);
-      }
-    }
-  }
+.main-nav .btn:last-child:hover {
+  cursor: pointer;
+  background-color: rgb(40, 40, 40);
 }

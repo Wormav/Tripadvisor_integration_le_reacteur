@@ -19,39 +19,45 @@ p {
   margin: 0;
 }
 
+
+
 .secondary-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  align-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
 
-  .btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    font-size: 16px;
-    text-align: start;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 10px;
-    height: 70px;
-    width: 150px;
+.secondary-nav .btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: start;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 70px;
+  width: 150px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
 
-    .btn-text {
-      margin: 5px 0 0 0;
-      text-overflow: ellipsis;
-    }
+.secondary-nav .btn-text {
+  margin: 5px 0 0 0;
+  text-overflow: ellipsis;
+}
 
-    .icon {
-      margin: 5px 0 0 0;
-      padding-left: 30px;
-    }
+.secondary-nav .icon {
+  margin: 5px 0 0 0;
+  padding-left: 30px;
+}
 
-    &:hover {
-      cursor: pointer;
-      background-color: black;
-      color: white;
-    }
-  }
+.secondary-nav .btn:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
 }
 
 .container {
@@ -62,28 +68,36 @@ p {
   margin-top: 25px;
   gap: 2px;
 
-  .main {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    height: 430px;
-
-    .text {
-      font-size: 20px;
-      max-width: 80%;
-    }
-
-    .main-picture {
-      width: 100%;
-      height: 430px;
-      object-fit: cover;
-
-      &:hover {
-        cursor: pointer;
-        opacity: 0.8;
-      }
-    }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;   
   }
+}
+
+.container .main {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 430px;
+
+  @media screen and (max-width: 768px) {
+    height: 350px;  
+  }
+}
+
+.container .main .text {
+  max-width: 80%;
+  height: fit-content;
+}
+
+.container .main .main-picture {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+}
+
+.container .main .main-picture:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .secondary {
@@ -94,152 +108,154 @@ p {
   width: 50%;
   height: 430px;
 
-  .secondary-picture {
-    width: 100%;
-    height: 213px;
-    object-fit: cover;
-
-    &:hover {
-      cursor: pointer;
-      opacity: 0.8;
-    }
+  @media screen and (max-width: 768px) {
+     display: none;
   }
+}
+
+.secondary .secondary-picture,
+.secondary-bis .secondary-picture {
+  width: 100%;
+  height: 213px;
+  object-fit: cover;
+}
+
+.secondary .secondary-picture:hover,
+.secondary-bis .secondary-picture:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .secondary-bis {
   width: 50%;
   height: 430px;
+}
 
-  .card {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    background-color: #ff5d5d;
-    padding: 10px;
-    border-radius: 20px 20px 0px 0px;
-  }
-  .text {
-    font-size: 20px;
-    max-width: 80%;
-  }
+.secondary-bis .card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #ff5d5d;
+  padding: 10px;
+  border-radius: 20px 20px 0px 0px;
+}
 
-  .btn {
-    background: black;
-    color: white;
-    border: none;
-    padding: 5px;
-    border-radius: 10px;
+.secondary-bis .text {
+  max-width: 80%;
+}
 
-    &:hover {
-      cursor: pointer;
-      background-color: rgb(40, 40, 40);
-    }
-  }
+.secondary-bis .btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+}
 
-  .secondary-picture {
-    width: 100%;
-    height: 213px;
-    object-fit: cover;
-
-    &:hover {
-      cursor: pointer;
-      opacity: 0.8;
-    }
-  }
+.secondary-bis .btn:hover {
+  cursor: pointer;
+  background-color: rgb(40, 40, 40);
 }
 
 .nav-step {
   margin-top: 25px;
-  font-size: 14px;
-  .link {
-    text-decoration: none;
-    color: black;
+}
 
-    &:hover {
-      cursor: pointer;
-      text-decoration: underline;
-    }
+.nav-step .link {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-step .link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.best {
+  margin: 190px 0;
+  width: 100%;
+}
+
+.best .container-best {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+  gap: 10px;
+
+    @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
   }
 }
 
-.best{
-  margin: 190px 0;
-  width: 100%;
+.best .container-best .card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 320px;
+  width: 320px;
+  min-width: 280px;
 
-  .container-best{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: 30px;
-    width: 100%;
-    gap: 10px;
-
-    .card {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      flex-direction: column;
-      height: 320px;
-      width: 320px;
-      min-width: 280px;
-      font-size: 16px;
-
-      .link {
-        color: black;
-      }
-
-      .image-container{
-         position: relative;
-
-        .picture-carousel {
-          width: 270px;
-          height: 220px
-        }
-
-        .icon-carousel-like{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          position: absolute;
-          right: 20px;
-          top: 10px;
-          background-color: white;
-          border: none;
-          border-radius: 50px;
-          width: 30px;
-          height: 30px;
-          font-size: 16px;
-
-          &:hover{
-            cursor: pointer;
-          }
-        }
-      }
-
-      .infos {
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        height: 100px;
-        .note-container{
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          margin: 5px 0 0 2px;
-
-          .note {
-            background-color: #04A96C;
-            border-radius: 10px;
-            width: 12px;
-            height: 12px;
-            margin-right: 2px;
-          }
-        }
-      }
-
-    }
+    @media screen and (max-width: 768px) {
+    height: 300px;
   }
+}
+
+.best .container-best .card .link {
+  color: black;
+}
+
+.best .container-best .card .image-container {
+  position: relative;
+}
+
+.best .container-best .card .image-container .picture-carousel {
+  width: 270px;
+  height: 220px;
+}
+
+.best .container-best .card .image-container .icon-carousel-like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  background-color: white;
+  border: none;
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+}
+
+.best .container-best .card .image-container .icon-carousel-like:hover {
+  cursor: pointer;
+}
+
+.best .container-best .card .infos {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 100px;
+}
+
+.best .container-best .card .infos .note-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5px 0 0 2px;
+}
+
+.best .container-best .card .infos .note-container .note {
+  background-color: #04A96C;
+  border-radius: 10px;
+  width: 12px;
+  height: 12px;
+  margin-right: 2px;
 }
 
 .carousel-container {
@@ -248,12 +264,17 @@ p {
   align-items: center;
   gap: 10px;
   max-width: 900px;
-  overflow-x: auto; /* Autorise le défilement, mais affiche la barre de défilement seulement si nécessaire */
-  white-space: nowrap; /* Empêche les éléments à l'intérieur de passer à la ligne suivante */
-  scrollbar-width: none; /* Pour les navigateurs Firefox */
-  -ms-overflow-style: none; /* Pour Internet Explorer et Edge */
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+    @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .carousel-container::-webkit-scrollbar {
-  width: 0; /* Pour les navigateurs Chrome, Safari et autres basés sur WebKit */
+  width: 0;
 }
